@@ -1,15 +1,15 @@
-// https://mvnrepository.com/artifact/org.scala-lang.modules/scala-xml
-libraryDependencies += "org.scala-lang.modules" %% "scala-xml" % "1.2.0"
-
-name := "iservport-concurrency-spring"
+import sbt._
 
 organization := "com.iservport"
 
-val springVersion = "2.5.2"
-libraryDependencies ++= Seq(
-  "org.springframework.boot" %  "spring-boot-starter-data-jpa" % springVersion,
-  "org.springframework.boot" %  "spring-boot-starter-freemarker" % springVersion,
-  "org.springframework.boot" %  "spring-boot-starter-security" % springVersion,
-  "org.projectlombok" %  "lombok" % "1.18.12",
-  "org.scalatest"     %% "scalatest"   % "3.1.0" % Test withSources()
-)
+ThisBuild / scalaVersion := "2.13.6"
+
+lazy val root = (project in file("."))
+  .dependsOn(concurrencyProject)
+  .settings(
+    name := "iservport-concurrency-spring",
+    Compile / mainClass := Some("com.iservport.concurrency.Application"),
+    libraryDependencies ++= AppDependencies()
+  )
+
+lazy val concurrencyProject = ProjectRef(uri("ssh://git@github.com/iservport/iservport-concurrency.git"), "iservport-concurrency")
