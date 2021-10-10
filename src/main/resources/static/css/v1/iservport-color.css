@@ -1,0 +1,72 @@
+:root {
+  --iserv-body-background-color: #F9F9F9;
+}
+
+body {
+  	background-color: var(--iserv-body-background-color);
+}
+
+.nav-container {
+    color: #0A0A0A;
+    background-color: #F3F3F3;
+}
+
+.nav-container a {
+    color: #0A0A0A;
+}
+
+.bg-light {
+	background-color: #ebeff5;
+}
+
+.bg-bar {
+	background-color: #dae1ed;
+}
+
+.bg-gray {
+	background-color: #d2d2d2 !important;
+}
+
+.bg-yellow {
+    color: #626262;
+    background-color: gold !important; /* #EBCB8B; #f9f6bf; */
+}
+
+.bg-cyan {
+    color: #626262;
+    background-color: powderblue !important; /* #A7FFEB; */
+}
+
+.bg-aqua {
+    color: #626262;
+    background-color: #85DBF2; !important;
+}
+
+.bg-green {
+    color: #626262;
+    background-color: palegreen !important; /* #d8fdcf; */
+}
+
+.bg-magenta {
+    background-color: lightpink !important; /* #FFD2FF; */
+}
+
+.bg-blue {
+    background-color: #80D8FF !important;
+}
+
+.bg-brown {
+   color: white;
+   background-color: #6F4C30 !important;
+}
+
+.bg-red {
+    background-color: #FF8A80 !important;
+}
+
+.bg-orange {
+    color: black;
+    background-color: #FFD180 !important;
+}
+
+.custom-froala { background-color: red; }
