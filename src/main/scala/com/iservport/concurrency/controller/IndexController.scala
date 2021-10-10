@@ -11,7 +11,7 @@ class IndexController {
   @GetMapping
   def action(model: Model) = {
     model.addAttribute("baseName", "home")
-    "frame-bootstrap"
+    "frame-bootstrap-v1"
   }
 
 }

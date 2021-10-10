@@ -1,7 +1,6 @@
 [#ftl]
 <!DOCTYPE html >
 <html data-ng-app="${baseName}" data-ng-cloak
-	  data-ng-controller="ViewController as $vctl"
 	  id="ng-app"
 	  xmlns:ng="http://angularjs.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:schemaLocation="http://angularjs.org ">
@@ -56,8 +55,8 @@
 			</div>
 			<div class="container-x page page-dashboard">
 				<div class="row">
-					<div id="selection-page" class="col-md-12">
-						<h1>Test</h1>
+					<div id="selection-page" class="col-md-12" ng-include="'${baseName}/selection-${baseName}.html'">
+
 					</div>
 				</div>
 			</div><!-- end of page -->
@@ -65,7 +64,7 @@
 	</div><!--content-->
 </div><!--main-container-->
 
-[#include "scripts.html" /]
+[#include "v1/scripts.html" /]
 
 </body>
 
