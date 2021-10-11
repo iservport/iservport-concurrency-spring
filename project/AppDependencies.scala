@@ -13,6 +13,7 @@ object AppDependencies {
     "io.springfox"             %  "springfox-swagger-ui"           % "3.0.0",
     "io.swagger.core.v3"       %  "swagger-annotations"            % "2.1.11",
     "javax.persistence"        %  "javax.persistence-api"          % "2.2",
+    "javax.xml.bind"           %  "jaxb-api"                       % "2.3.1",
     "com.h2database"           %  "h2"                             % "1.4.200",
     "org.slf4j"                %  "slf4j-api"                      % "1.8.0-beta4",
     "org.slf4j"                %  "jul-to-slf4j"                   % "1.8.0-beta4",

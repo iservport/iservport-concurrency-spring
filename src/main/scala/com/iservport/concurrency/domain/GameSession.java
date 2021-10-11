@@ -4,17 +4,16 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-@Setter @Getter @EqualsAndHashCode(of = {"gameNumber"})
-public class GameSession {
+@Setter @Getter
+@EqualsAndHashCode(of = {"gameNumber"})
+public class GameSession implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
     private Integer gameNumber;

@@ -16,6 +16,8 @@ spring:
     driverClassName: org.h2.Driver
     username: sa
     password: password
+    hikari:
+      maximum-pool-size: 2
   freemarker:
     prefer-file-system-access: false
     charset: UTF-8
