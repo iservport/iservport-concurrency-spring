@@ -8,10 +8,14 @@
 
             const $ctrl = this;
 
+            $scope.isFaceUp = true;
+
 			$http.get("/api/game/start")
 				.then(function(response) {
 					$scope.game = response.data;
 				}).catch(function(e) { $log.error("Game start FAILED"+e); })
+
+			$ctrl.turn = () => { $scope.isFaceUp = !$scope.isFaceUp; }
 		}])
     ;
 

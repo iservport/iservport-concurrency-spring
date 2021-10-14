@@ -9,4 +9,7 @@ class GameController {
 
   @GetMapping(Array("/start"))
   def newGame(): Game = Game.newGame
+
+  @GetMapping(Array("/pick"))
+  def pick(index: Int): Game = ???
 }
